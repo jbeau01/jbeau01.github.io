@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projet Personnel - Galerie Photos</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/galeriePhotos.css">
+        <script src="js/galeriePhotos.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <!--*****Navigation Menu******-->
+        <div class="topMenuNav" id="topNav">
+            <a href="index.html">Accueil</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="#Forum">Forum</a>
+            <a href="galeriePhotos.html">Galerie Photos</a>
+            <a href="#nouveautes">Nous Contacter</a>
+            <a href="javascript:void(0);" class="icon" onclick="topNavFonction()">&#9776;</a>
+        </div>
+        
+        <!--*****Head sous menu, titre de la page*****-->
+        <div class="row">
+            <div class="col-12 head">
+                <h1>Panama 2016-2017</h1>
+            </div>
+        </div>
+        
+        <!--*****Contenu page (photos voyage)*****-->
+        <div class="row"> 
+            <div class="col-3 contenuPage">
+                <img class="monImage" src="images/panama2016-2017Crew.jpg" alt="Photo de groupe">
+                <div class="alternate"><img class="monImage" src="images/daiquiri.jpg" alt="Daiquiri aux fraises"></div>
+                <div class="alternate"><img class="monImage" src="images/moi.jpg" alt="Moi"></div>
+               <img class="monImage" src="images/piscine.jpg" alt="Piscine">
+            </div>
+            <div class="col-3 contenuPage">
+                <div class="alternate"><img class="monImage" src="images/moi2.jpg" alt="Moi"></div>
+                <img class="monImage" src="images/beach2.jpg" alt="Beach">
+                <div class="alternate"><img class="monImage" src="images/bus.jpg" alt="Bus arrivée"></div>
+                <img class="monImage" src="images/ping-pong.jpg">
+           </div>
+            <div class="col-3 contenuPage">
+                <img class="monImage" src="images/vueDuPanamai.jpg">
+                <div class="alternate"><img class="monImage" src="images/aube.jpg"></div>
+                <img class="monImage" src="images/batimentsChambres.jpg">
+                <div class="alternate"><img class="monImage" src="images/feuilleChambre.jpg"></div>
+            </div>
+            <div class="col-3 contenuPage">
+                 <div class="alternate"><img class="monImage" src="images/manu.jpg" alt="Manu"></div>
+                 <div class="alternate"><img class="monImage" src="images/avion.jpg"></div>
+                 <img class="monImage" src="images/piscine2.jpg">
+                 <img class="monImage" src="images/vueVersOcean.jpg">
+            </div>
+            
+            <div id="monModele" class="modele">
+              <span class="close">&times;</span>
+              <img class="modele-content" id="modeleImage">
+              <div id="text"></div>
+            </div>
+
+        </div>
+        
+        <!--*****Pied de Page*****-->
+        
+        <div class="row">
+            <div class="col-12 footer">
+                <img src="images/avionlogo.svg"/>
+                &copy; MonSiteWeb.com
+            </div>
+        </div>
+
+        <script>
+            /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+            function topNavFonction() {
+                var x = document.getElementById("topNav");
+                if (x.className === "topMenuNav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topMenuNav";
+                }
+            }
+        </script>
+    </body>
+</html>

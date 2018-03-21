@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projet Personnel - Accueil</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    
+    <body>
+        <!--*****Navigation Menu******-->
+        <div class="topMenuNav" id="topNav">
+            <a href="#accueil">Accueil</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="#Forum">Forum</a>
+            <a href="galeriePhotos.html">Galerie Photos</a>
+            <a href="#nouveautes">Nous Contacter</a>
+            <a href="javascript:void(0);" class="icon" onclick="topNavFonction()">&#9776;</a>
+        </div>
+        
+        <!--*****Head*****-->
+        <div class="row headBackground">
+            <div class="col-12 head">
+                <h1>Mon Site Web</h1>
+            </div>
+        </div>
+        
+        <!--*****Titre Section (Destinations populaires)******-->
+        <div class="row">
+            <div class="col-12 destinationsPopulaires">
+                <h2>Destinations populaires</h2>
+            </div>
+        </div>
+        
+        <!--*****Content(Destinations)*****-->
+        <div class="row">
+            <div class="carouselContainer">
+                <div class="mesImages fade">
+                    <a href="#"><img src="images/panama.jpg" style="width: 100%;"/></a>
+                    <div class="imagesTexte">
+                        Panama
+                         <br/>
+                        Cliquez pour en savoir plus!
+                    </div>
+                </div>
+                <div class="mesImages fade">
+                    <a href="#"><img src="images/allemagne.jpg" style="width: 100%;"/></a>
+                    <div class="imagesTexte">
+                        Allemagne
+                         <br/>
+                        Cliquez pour en savoir plus!
+                    </div>
+                </div>
+                 <div class="mesImages fade">
+                     <a href="#"><img src="images/suisse.jpg" style="width: 100%;"/></a>
+                     <div class="imagesTexte">
+                        Suisse
+                          <br/>
+                        Cliquez pour en savoir plus!
+                    </div>
+                </div>
+                 <div class="mesImages fade">
+                     <a href=""><img src="images/mexique.jpg" style="width: 100%;"/></a>
+                     <div class="imagesTexte">
+                        Mexique
+                          <br/>
+                        Cliquez pour en savoir plus!
+                    </div>
+                </div>
+                <div class="mesImages fade">
+                    <a href="norvege.html"><img src="images/norvege.jpg" style="width: 100%;"/></a>
+                    <div class="imagesTexte">
+                        Norvège
+                        <br/>
+                        Cliquez pour en savoir plus!
+                        
+                    </div>
+                </div>
+                 <div class="mesImages fade">
+                     <a href=""><img src="images/islande.jpg" style="width: 100%;"/></a>
+                     <div class="imagesTexte">
+                        Islande
+                         <br/>
+                        Cliquez pour en savoir plus!
+                    </div>
+                </div>
+                <div class="mesImages fade">
+                    <a href=""><img src="images/irlande.jpg" style="width: 100%;"/></a>
+                    <div class="imagesTexte">
+                        Irlande
+                        <br/>
+                        Cliquez pour en savoir plus!
+                    </div>
+                </div>
+                
+                <div class="slidesDots">
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                </div>
+            </div>
+        </div>
+        
+        <!--*****Pied de Page*****-->
+        
+        <div class="row">
+            <div class="col-12 footer">
+                <img src="images/avionlogo.svg"/>
+                &copy; MonSiteWeb.com
+            </div>
+        </div>
+
+        <script>
+            /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+            function topNavFonction() {
+                var x = document.getElementById("topNav");
+                if (x.className === "topMenuNav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topMenuNav";
+                }
+            }
+        </script>
+        <script>
+            var imageIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var images = document.getElementsByClassName("mesImages");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < images.length; i++) {
+                   images[i].style.display = "none";  
+                }
+                imageIndex++;
+                if (imageIndex > images.length) {imageIndex = 1}    
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                images[imageIndex-1].style.display = "block";  
+                dots[imageIndex-1].className += " active";
+                setTimeout(carousel, 4000); // Change image every 4 seconds
+            }
+        </script>
+    
+    </body>
+</html>

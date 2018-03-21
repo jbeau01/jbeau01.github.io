@@ -1,0 +1,288 @@
+/*Pour que les bordures de tous les éléments soient pris en compte dans les dimensions*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+::-webkit-scrollbar {
+   Background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+   Background-color: rgb(7, 123, 7);
+}
+
+/*Tête de page sous le menu de navigation*/
+.head {
+    height: 100px;
+}
+
+.head h1 {
+    color: black;
+    text-align: center;
+    font-size: 35px;
+}
+
+/*Menu navigation*/
+.topMenuNav {
+    background-color: black;
+    overflow: hidden;
+}
+
+/*Liens vers autres pages menu navigation*/
+.topMenuNav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    
+}
+
+/*Icône menu navigation sous mobile*/
+.topMenuNav .icon {
+    display: none;
+    padding: 12.5px 16px;
+}
+
+.topMenuNav a:hover {
+    background-color: rgb(7, 123, 7);
+}
+
+.topMenuNav a:active {
+    background-color: rgb(7, 123, 7);
+}
+
+/*Desktop*/
+[class*="col-"] {
+    float: left;
+    padding: 2px;
+    border: none;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/*Prévenir éléments de sortir du flow de la page*/
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/**********Contenu page (photos)**********/
+.contenuPage {
+    height: auto;
+}
+
+.contenuPage img {
+    float: left;
+    width: 100%;
+    margin: 2px;
+    height: 250px;
+    opacity: 0.7;
+}
+
+@keyframes images {
+    from {opacity: 0.7;}
+    to {opacity: 1;}
+}
+
+.contenuPage img:hover {
+    animation-name: images;
+    animation-duration: 0.7s;
+    opacity: 1;
+}
+
+.alternate img {
+    height: 400px;
+    width: 100%;
+    margin: 2px;
+    object-fit: cover;
+    float: left;
+}
+
+/**********Modele lorsqu'on clique sur une image**********/
+.monImage {
+    cursor: pointer;
+}
+
+.modele {
+    z-index: 1;
+    position: fixed;
+    display: none;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+.modele-content {
+    margin: auto;
+    display: block;
+    width: 30%;
+    max-width: 700px;
+}
+
+#text {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modele-content, #imgText { 
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/**********Pied de page**********/
+.footer {
+    height: 150px;
+    background-color: black;
+    color: white;
+}
+
+.footer img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-top: 50px;
+    margin-left: 20px;
+    
+}
+
+/**********Mobile**********/
+@media (max-width: 800px) {
+    /*Affiche 2 colonnes au lieu de 4*/
+    .contenuPage {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+    
+    ::-webkit-scrollbar {
+        Background-color: black;
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        Background-color: rgb(7, 123, 7);
+    }   
+    
+    .head h1 {
+        font-size: 25px;
+    }
+    
+    .head {
+        max-height: 225px;
+    }
+    
+    /*Affiche les images une par-dessus l'autre*/
+    .contenuPage {
+        width: 100%;
+    }
+    
+    .contenuPage img {
+        width: 100%;
+    }
+    
+    
+    .footer {
+        height: 100px;
+        color: white;
+        font-size: 10px;
+    }
+    
+    .footer img {
+        margin-top: 30px;
+        margin-left: 0px;
+    
+    }
+    
+    /*modele-content mobile*/
+    .modele-content {
+        width: 100%;
+    }
+
+
+/*topNav sur mobile*/
+@media screen and (max-width: 600px) {
+  .topMenuNav a:not(:first-child) {display: none;}
+  .topMenuNav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/*Affichage du topNav en vertical sur menu lorsque le bouton est cliqué*/
+@media screen and (max-width: 600px) {
+  .topMenuNav.responsive {position: relative;}
+  .topMenuNav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topMenuNav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    
+  }
+}

@@ -1,0 +1,50 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bgImg {
+    height: 100%;
+    background-image: url(../images/norvege.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 46%;
+    margin: auto;
+    font-size: 40px;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    border: 1px solid white;
+    
+}
+
+.barre {
+    top: 50%;
+    width: 20%;
+    background-color: white;
+    height: 2px;
+    position: absolute;
+    left: 40%;
+    
+}
+
+.btnAccueil {
+    width: 200px;
+    height: 25px;
+    position: absolute;
+    left: 43.5%;
+    top: 60%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    padding: 6px;
+    font-size: 20px;
+    border: 1px solid white;
+}
+
+

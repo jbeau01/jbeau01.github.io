@@ -230,7 +230,7 @@ body {
     
     /*Texte sur les images du carousel des destinations populaires*/
     .imagesTexte {
-        margin-top: -550px;
+        margin-top: -175px;
         left: 50%;
         font-size: 20px;
     }

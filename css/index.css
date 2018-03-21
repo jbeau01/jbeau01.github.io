@@ -164,7 +164,7 @@ body {
 /*Texte sur les images du carousel des destinations populaires*/
 .imagesTexte {
     position: absolute;
-    top: 125%;
+    margin-top: -550px;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -230,7 +230,7 @@ body {
     
     /*Texte sur les images du carousel des destinations populaires*/
     .imagesTexte {
-        top: 65%;
+        margin-top: -550px;
         left: 50%;
         font-size: 20px;
     }
